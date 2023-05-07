@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>الحزب الراتب لشيخنا الشيخ ماء العينين رضي الله عنه و أرضاه</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Amiri&display=swap" rel="stylesheet">
+
+  <style>
+      h1 {
+    font-family: 'Amiri', serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+  body {
+    background-image: url("Smara.jpeg");
+    background-size: cover;
+  }
+      body {
+			font-family: 'Amiri', serif;
+			font-size: 22px;
+			text-align: center;
+		}
+       .text-center {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+      .table-centered {
+  margin: 0 auto;
+}
+  </style>
+</head>
+<body class="d-flex justify-content-center">
+ 
+
+  <div class="text-center">
+  <h1>الحزب الراتب لشيخنا الشيخ ماء العينين<br>رضي الله عنه و أرضاه </h1>
+  <h5><p id="date"></p></h5>
+  <button id="previous" class="btn btn-primary">السابق</button>
+  <button id="today" class="btn btn-primary mx-2">اليوم</button>
+  <button id="next" class="btn btn-primary">اللاحق</button>
+           <div>
+<h4></h4>
+</div>
+    
+    <div class="blog-post-des">
+                             <h5 style="text-align: center;">♦️مجموع ما يُتلى في حزب الصبح♦️</h5>
+                             <h5 id="sobh" style="text-align: center;"></h5>
+                             <p style=" text-align: center;">سورة يس▪️ <br />&nbsp;سورة الصف▪️ <br />&nbsp;قريش ثلاثا▪️ <br />&nbsp;" الحمد لله الذي هدانا لهذا وما كنا لنهتدي لولا أن هدانا الله"▪️ <br />&nbsp;الفاتحة خمس مرات▪️</p>
+                           
+                             <p id="waqf" style=" text-align: center;"></p>
+                             <p id="doaa" style=" text-align: center;"></p>
+                             <p id="istijaba" style=" text-align: center;"></p>
+                              
+                         </div>
+
+</div>
+
+
+
+  <script>
+    // Récupérer la date actuelle
+    var today = new Date();
+
+    // Afficher la date en format jour/mois/année en arabe
+    var arabicDate = today.toLocaleString("ar-SA", {
+      weekday: "long",
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+      numberingSystem: "latn"
+    });
+    document.getElementById("date").innerHTML = arabicDate;
+
+    // Fonction pour avancer/reculer la date
+    function changeDate(offset) {
+      today.setDate(today.getDate() + offset);
+      arabicDate = today.toLocaleString("ar-SA", {
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+        numberingSystem: "latn"
+      });
+      document.getElementById("date").innerHTML = arabicDate;
+    }
+
+    // Événement pour reculer la date
+    document.getElementById("previous").addEventListener("click", function() {
+      changeDate(-1);
+        nextDay.setDate(nextDay.getDate() - 1);
+  day=formatDate(nextDay);
+
+
+//formatDate(new Date())
+
+var date1 = new Date("01/04/1922"); 
+var date2 = new Date(day); 
+var Diff_temps = date2.getTime() - date1.getTime(); 
+var Diff_jours = Diff_temps / (1000 * 3600 * 24);
+var z=(Math.round(Diff_jours)%21)+1;
+
+switch (z) {
+
+  case 1:
+         document.getElementById("sobh").innerHTML = "الحزب 59: ( عم )";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+
+         break;
+  case 2:
+         document.getElementById("sobh").innerHTML =  "الحزب 2: ( وإذا لقوا ) ";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+
+         break;
+  case 3:
+         document.getElementById("sobh").innerHTML ="سورتي الكهف و الدخان";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+
+         break;
+  case 4:
+         document.getElementById("sobh").innerHTML =  "الحزب 7: (لن تنالوا البر حتى تنفقوا مما تحبون)";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى  ( يستبشرون بنعمة من الله و فضل و أن الله لا يضيع أجر المومنين ) آل عمران 171";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 5:
+         document.getElementById("sobh").innerHTML =  "الحزب 10: ( الله لا إله إلا هو )";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 6:
+         document.getElementById("sobh").innerHTML =  "الحزب 13: (لتجدن)";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى ( إنما يستجيب الذين يسمعون ) الأنعام 37";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 7:
+         document.getElementById("sobh").innerHTML = "الحزب 16: ⚠️من أول سورة الأعراف";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 8:
+         document.getElementById("sobh").innerHTML =  "الحزب 19: (و اعلموا)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 9:
+         document.getElementById("sobh").innerHTML =  "الحزب 22: (للذين أحسنوا الحسنى)";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى (واصبر حتى يحكم الله وهو خير الحاكمين) يونس 109 ";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 10:
+         document.getElementById("sobh").innerHTML = "سورتي الكهف و الدخان";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 11:
+         document.getElementById("sobh").innerHTML =  "الحزب 27: ⚠️من بداية سورة الحجر";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 12:
+         document.getElementById("sobh").innerHTML =  "الحزب 30: (أولم يروا أن الله)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 13:
+         document.getElementById("sobh").innerHTML =  "الحزب 33: (اقترب للناس حسابهم)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 14:
+         document.getElementById("sobh").innerHTML =  "الحزب 36: (يا أيها الذين آمنوا)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 15:
+         document.getElementById("sobh").innerHTML =  "الحزب 39: (فما كان جواب قومه)";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى ( ولقد وصلنا لهم القول لعلهم يتذكرون ) القصص 51  ";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 16:
+         document.getElementById("sobh").innerHTML =  "الحزب 42: (ومن يسلم وجهه)";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى ( ومن يقنت منكن لله ورسوله وتعمل صالحا نوتها اجرها مرتين واعتدنا لها رزقا كريما ) الاحزاب 31  ";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 17:
+         document.getElementById("sobh").innerHTML = "سورتي الكهف و الدخان";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 18:
+         document.getElementById("sobh").innerHTML =  "الحزب 47: (فمن أظلم)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 19:
+         document.getElementById("sobh").innerHTML =  "الحزب 50: (قال أولو جئتكم)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 20:
+         document.getElementById("sobh").innerHTML =  "الحزب 53: (قال فما خطبكم)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 21:
+         document.getElementById("sobh").innerHTML = "الحزب 56: ( يسبح )";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+      }
+
+    });
+
+    // Événement pour revenir à la date d'aujourd'hui
+    document.getElementById("today").addEventListener("click", function() {
+      today = new Date();
+      arabicDate = today.toLocaleString("ar-SA", {
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+        numberingSystem: "latn"
+      });
+      document.getElementById("date").innerHTML = arabicDate;
+        // ici today
+        nextDay=new Date();
+  day=formatDate(nextDay);
+
+
+//formatDate(new Date())
+
+var date1 = new Date("01/04/1922"); 
+var date2 = new Date(day); 
+var Diff_temps = date2.getTime() - date1.getTime(); 
+var Diff_jours = Diff_temps / (1000 * 3600 * 24);
+var z=(Math.round(Diff_jours)%21)+1;
+
+switch (z) {
+
+  case 1:
+         document.getElementById("sobh").innerHTML = "الحزب 59: ( عم )";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+
+         break;
+  case 2:
+         document.getElementById("sobh").innerHTML =  "الحزب 2: ( وإذا لقوا ) ";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+
+         break;
+  case 3:
+         document.getElementById("sobh").innerHTML ="سورتي الكهف و الدخان";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+
+         break;
+  case 4:
+         document.getElementById("sobh").innerHTML =  "الحزب 7: (لن تنالوا البر حتى تنفقوا مما تحبون)";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى  ( يستبشرون بنعمة من الله و فضل و أن الله لا يضيع أجر المومنين ) آل عمران 171";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 5:
+         document.getElementById("sobh").innerHTML =  "الحزب 10: ( الله لا إله إلا هو )";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 6:
+         document.getElementById("sobh").innerHTML =  "الحزب 13: (لتجدن)";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى ( إنما يستجيب الذين يسمعون ) الأنعام 37";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 7:
+         document.getElementById("sobh").innerHTML = "الحزب 16: ⚠️من أول سورة الأعراف";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 8:
+         document.getElementById("sobh").innerHTML =  "الحزب 19: (و اعلموا)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 9:
+         document.getElementById("sobh").innerHTML =  "الحزب 22: (للذين أحسنوا الحسنى)";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى (واصبر حتى يحكم الله وهو خير الحاكمين) يونس 109 ";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 10:
+         document.getElementById("sobh").innerHTML = "سورتي الكهف و الدخان";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 11:
+         document.getElementById("sobh").innerHTML =  "الحزب 27: ⚠️من بداية سورة الحجر";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 12:
+         document.getElementById("sobh").innerHTML =  "الحزب 30: (أولم يروا أن الله)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 13:
+         document.getElementById("sobh").innerHTML =  "الحزب 33: (اقترب للناس حسابهم)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 14:
+         document.getElementById("sobh").innerHTML =  "الحزب 36: (يا أيها الذين آمنوا)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 15:
+         document.getElementById("sobh").innerHTML =  "الحزب 39: (فما كان جواب قومه)";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى ( ولقد وصلنا لهم القول لعلهم يتذكرون ) القصص 51  ";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 16:
+         document.getElementById("sobh").innerHTML =  "الحزب 42: (ومن يسلم وجهه)";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى ( ومن يقنت منكن لله ورسوله وتعمل صالحا نوتها اجرها مرتين واعتدنا لها رزقا كريما ) الاحزاب 31  ";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 17:
+         document.getElementById("sobh").innerHTML = "سورتي الكهف و الدخان";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 18:
+         document.getElementById("sobh").innerHTML =  "الحزب 47: (فمن أظلم)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 19:
+         document.getElementById("sobh").innerHTML =  "الحزب 50: (قال أولو جئتكم)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 20:
+         document.getElementById("sobh").innerHTML =  "الحزب 53: (قال فما خطبكم)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 21:
+         document.getElementById("sobh").innerHTML = "الحزب 56: ( يسبح )";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+      }
+
+    });
+
+    // Événement pour avancer la date
+    document.getElementById("next").addEventListener("click", function() {
+      changeDate(1);
+        //ici +1
+        
+        nextDay.setDate(nextDay.getDate() + 1);
+  day=formatDate(nextDay);
+
+
+//formatDate(new Date())
+
+var date1 = new Date("01/04/1922"); 
+var date2 = new Date(day); 
+var Diff_temps = date2.getTime() - date1.getTime(); 
+var Diff_jours = Diff_temps / (1000 * 3600 * 24);
+var z=(Math.round(Diff_jours)%21)+1;
+
+ switch (z) {
+
+  case 1:
+         document.getElementById("sobh").innerHTML = "الحزب 59: ( عم )";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+
+         break;
+  case 2:
+         document.getElementById("sobh").innerHTML =  "الحزب 2: ( وإذا لقوا ) ";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+
+         break;
+  case 3:
+         document.getElementById("sobh").innerHTML ="سورتي الكهف و الدخان";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+
+         break;
+  case 4:
+         document.getElementById("sobh").innerHTML =  "الحزب 7: (لن تنالوا البر حتى تنفقوا مما تحبون)";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى  ( يستبشرون بنعمة من الله و فضل و أن الله لا يضيع أجر المومنين ) آل عمران 171";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 5:
+         document.getElementById("sobh").innerHTML =  "الحزب 10: ( الله لا إله إلا هو )";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 6:
+         document.getElementById("sobh").innerHTML =  "الحزب 13: (لتجدن)";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى ( إنما يستجيب الذين يسمعون ) الأنعام 37";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 7:
+         document.getElementById("sobh").innerHTML = "الحزب 16: ⚠️من أول سورة الأعراف";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 8:
+         document.getElementById("sobh").innerHTML =  "الحزب 19: (و اعلموا)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 9:
+         document.getElementById("sobh").innerHTML =  "الحزب 22: (للذين أحسنوا الحسنى)";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى (واصبر حتى يحكم الله وهو خير الحاكمين) يونس 109 ";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 10:
+         document.getElementById("sobh").innerHTML = "سورتي الكهف و الدخان";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 11:
+         document.getElementById("sobh").innerHTML =  "الحزب 27: ⚠️من بداية سورة الحجر";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 12:
+         document.getElementById("sobh").innerHTML =  "الحزب 30: (أولم يروا أن الله)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 13:
+         document.getElementById("sobh").innerHTML =  "الحزب 33: (اقترب للناس حسابهم)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 14:
+         document.getElementById("sobh").innerHTML =  "الحزب 36: (يا أيها الذين آمنوا)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 15:
+         document.getElementById("sobh").innerHTML =  "الحزب 39: (فما كان جواب قومه)";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى ( ولقد وصلنا لهم القول لعلهم يتذكرون ) القصص 51  ";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 16:
+         document.getElementById("sobh").innerHTML =  "الحزب 42: (ومن يسلم وجهه)";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى ( ومن يقنت منكن لله ورسوله وتعمل صالحا نوتها اجرها مرتين واعتدنا لها رزقا كريما ) الاحزاب 31  ";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 17:
+         document.getElementById("sobh").innerHTML = "سورتي الكهف و الدخان";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 18:
+         document.getElementById("sobh").innerHTML =  "الحزب 47: (فمن أظلم)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 19:
+         document.getElementById("sobh").innerHTML =  "الحزب 50: (قال أولو جئتكم)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 20:
+         document.getElementById("sobh").innerHTML =  "الحزب 53: (قال فما خطبكم)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 21:
+         document.getElementById("sobh").innerHTML = "الحزب 56: ( يسبح )";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+      }
+
+    });
+  </script>
+    
+
+<script>
+function padTo2Digits(num) {
+  return num.toString().padStart(2, '0');
+}
+
+function formatDate(date) {
+  return [
+    padTo2Digits(date.getMonth() + 1),
+    padTo2Digits(date.getDate()),
+    date.getFullYear(),
+  ].join('/');
+}
+//formatDate(new Date())
+var nextDay = new Date();
+var day=formatDate(new Date());
+var date1 = new Date("01/04/1922"); 
+var date2 = new Date(day); 
+var Diff_temps = date2.getTime() - date1.getTime(); 
+var Diff_jours = Diff_temps / (1000 * 3600 * 24);
+var z=(Math.round(Diff_jours)%21)+1;
+    
+    
+ switch (z) {
+
+  case 1:
+         document.getElementById("sobh").innerHTML = "الحزب 59: ( عم )";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+
+         break;
+  case 2:
+         document.getElementById("sobh").innerHTML =  "الحزب 2: ( وإذا لقوا ) ";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+
+         break;
+  case 3:
+         document.getElementById("sobh").innerHTML ="سورتي الكهف و الدخان";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+
+         break;
+  case 4:
+         document.getElementById("sobh").innerHTML =  "الحزب 7: (لن تنالوا البر حتى تنفقوا مما تحبون)";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى  ( يستبشرون بنعمة من الله و فضل و أن الله لا يضيع أجر المومنين ) آل عمران 171";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 5:
+         document.getElementById("sobh").innerHTML =  "الحزب 10: ( الله لا إله إلا هو )";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 6:
+         document.getElementById("sobh").innerHTML =  "الحزب 13: (لتجدن)";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى ( إنما يستجيب الذين يسمعون ) الأنعام 37";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 7:
+         document.getElementById("sobh").innerHTML = "الحزب 16: ⚠️من أول سورة الأعراف";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 8:
+         document.getElementById("sobh").innerHTML =  "الحزب 19: (و اعلموا)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 9:
+         document.getElementById("sobh").innerHTML =  "الحزب 22: (للذين أحسنوا الحسنى)";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى (واصبر حتى يحكم الله وهو خير الحاكمين) يونس 109 ";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 10:
+         document.getElementById("sobh").innerHTML = "سورتي الكهف و الدخان";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 11:
+         document.getElementById("sobh").innerHTML =  "الحزب 27: ⚠️من بداية سورة الحجر";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 12:
+         document.getElementById("sobh").innerHTML =  "الحزب 30: (أولم يروا أن الله)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 13:
+         document.getElementById("sobh").innerHTML =  "الحزب 33: (اقترب للناس حسابهم)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 14:
+         document.getElementById("sobh").innerHTML =  "الحزب 36: (يا أيها الذين آمنوا)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 15:
+         document.getElementById("sobh").innerHTML =  "الحزب 39: (فما كان جواب قومه)";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى ( ولقد وصلنا لهم القول لعلهم يتذكرون ) القصص 51  ";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 16:
+         document.getElementById("sobh").innerHTML =  "الحزب 42: (ومن يسلم وجهه)";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى ( ومن يقنت منكن لله ورسوله وتعمل صالحا نوتها اجرها مرتين واعتدنا لها رزقا كريما ) الاحزاب 31  ";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 17:
+         document.getElementById("sobh").innerHTML = "سورتي الكهف و الدخان";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 18:
+         document.getElementById("sobh").innerHTML =  "الحزب 47: (فمن أظلم)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 19:
+         document.getElementById("sobh").innerHTML =  "الحزب 50: (قال أولو جئتكم)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 20:
+         document.getElementById("sobh").innerHTML =  "الحزب 53: (قال فما خطبكم)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 21:
+         document.getElementById("sobh").innerHTML = "الحزب 56: ( يسبح )";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+      }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>الحزب الراتب لشيخنا الشيخ ماء العينين رضي الله عنه و أرضاه</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Amiri&display=swap" rel="stylesheet">
+
+  <style>
+      h1 {
+    font-family: 'Amiri', serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+  body {
+    background-image: url("ressources/Smara.jpeg");
+    background-size: cover;
+  }
+      body {
+			font-family: 'Amiri', serif;
+			font-size: 24px;
+			text-align: center;
+		}
+       .text-center {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+      .table-centered {
+  margin: 0 auto;
+}
+  </style>
+</head>
+<body class="d-flex justify-content-center">
+ 
+
+  <div class="text-center">
+  <h1>الحزب الراتب لشيخنا الشيخ ماء العينين<br>رضي الله عنه و أرضاه </h1>
+  <img src="ressources/cheikhna2.png" width="120" height="160" class="img-fluid" alt="Image description">
+  <h5><p id="date"></p></h5>
+  <button id="previous" class="btn btn-primary">السابق</button>
+  <button id="today" class="btn btn-primary mx-2">اليوم</button>
+  <button id="next" class="btn btn-primary">اللاحق</button>
+<div>
+<h4></h4>
+</div> 
+    
+  <table class="table-centered" height="111" border="10px">
+    <thead>
+      <tr>
+        <td>
+          <h3></h3>
+          <h3><a href="ressources/sobh.html">&lt;&lt; تنبيهات</a></h3>
+        </td>
+        <td>
+          <h3>الصبح&nbsp;▪️</h3>
+          <h3 id="sobh"></h3>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h3></h3>
+          <h3><a href="ressources/maghreb.html">&lt;&lt; تنبيهات</a></h3>
+        </td>
+        <td>
+          <h3>المغرب&nbsp;▪️</h3>
+          <h3 id="magh"></h3>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h3></h3>
+          <h3><a href="ressources/icha.html">&lt;&lt; تنبيهات</a></h3>
+        </td>
+        <td>
+          <h3>العشاء&nbsp;▪️</h3>
+          <h3 id="icha"></h3>
+        </td>
+      </tr>
+    </thead>
+  </table>
+</div>
+
+
+
+  <script>
+    // Récupérer la date actuelle
+    var today = new Date();
+
+    // Afficher la date en format jour/mois/année en arabe
+    var arabicDate = today.toLocaleString("ar-SA", {
+      weekday: "long",
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+      numberingSystem: "latn"
+    });
+    document.getElementById("date").innerHTML = arabicDate;
+
+    // Fonction pour avancer/reculer la date
+    function changeDate(offset) {
+      today.setDate(today.getDate() + offset);
+      arabicDate = today.toLocaleString("ar-SA", {
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+        numberingSystem: "latn"
+      });
+      document.getElementById("date").innerHTML = arabicDate;
+    }
+
+    // Événement pour reculer la date
+    document.getElementById("previous").addEventListener("click", function() {
+      changeDate(-1);
+        nextDay.setDate(nextDay.getDate() - 1);
+  day=formatDate(nextDay);
+
+
+//formatDate(new Date())
+
+var date1 = new Date("01/04/1922"); 
+var date2 = new Date(day); 
+var Diff_temps = date2.getTime() - date1.getTime(); 
+var Diff_jours = Diff_temps / (1000 * 3600 * 24);
+var z=(Math.round(Diff_jours)%21)+1;
+
+ switch (z) {
+
+  case 1:
+         document.getElementById("sobh").innerHTML = "الحزب 59: ( عم )";
+         document.getElementById("magh").innerHTML = "الحزب 60: ( سبح اسم ربك الاعلى )";
+         document.getElementById("icha").innerHTML = "الحزب 1: (ألم ) ";
+         break;
+  case 2:
+         document.getElementById("sobh").innerHTML =  "الحزب 2: ( وإذا لقوا ) ";
+         document.getElementById("magh").innerHTML =  "الحزب 3: ( سيقول ) ";
+         document.getElementById("icha").innerHTML = "الحزب 4: (واذكروا الله )";
+         break;
+  case 3:
+         document.getElementById("sobh").innerHTML ="سورتي الكهف و الدخان";
+         document.getElementById("magh").innerHTML = "الحزب 5: (تلك الرسل)";
+         document.getElementById("icha").innerHTML = "الحزب 6: (قل أونبئكم )";
+         break;
+  case 4:
+         document.getElementById("sobh").innerHTML =  "الحزب 7: (لن تنالوا البر حتى تنفقوا مما تحبون)";
+         document.getElementById("magh").innerHTML =  "الحزب 8: ( يستبشرون )";
+         document.getElementById("icha").innerHTML =  "الحزب 9: ( والمحصنات )";
+         break;
+  case 5:
+         document.getElementById("sobh").innerHTML =  "الحزب 10: ( الله لا إله إلا هو )";
+         document.getElementById("magh").innerHTML =  "الحزب 11: ( لا يحب الله الجهر بالسوء  )";
+         document.getElementById("icha").innerHTML =  "الحزب 12: ( قال رجلان )";
+         break;
+  case 6:
+         document.getElementById("sobh").innerHTML =  "الحزب 13: (لتجدن)";
+         document.getElementById("magh").innerHTML ="الحزب 14: (إنما يستجيب)";
+         document.getElementById("icha").innerHTML = "الحزب 15: ( و لو أننا )";
+         break;
+  case 7:
+         document.getElementById("sobh").innerHTML = "الحزب 16: ⚠️من أول سورة الأعراف";
+         document.getElementById("magh").innerHTML = "الحزب 17: (قال الملأ)";
+         document.getElementById("icha").innerHTML =  "الحزب 18: (و إذ نتقنا)";
+         break;
+  case 8:
+         document.getElementById("sobh").innerHTML =  "الحزب 19: (و اعلموا)";
+         document.getElementById("magh").innerHTML =  "الحزب 20: (يا أيها الذين ءامنوا إن كثيرا)";
+         document.getElementById("icha").innerHTML =  "الحزب 21: (إنما السبيل)";
+         break;
+  case 9:
+         document.getElementById("sobh").innerHTML =  "الحزب 22: (للذين أحسنوا الحسنى)";
+         document.getElementById("magh").innerHTML =  "الحزب 23: ⚠️من بداية سورة هود ";
+         document.getElementById("icha").innerHTML =  "الحزب 24: (و إلى مدين)";
+         break;
+  case 10:
+         document.getElementById("sobh").innerHTML = "سورتي الكهف و الدخان";
+         document.getElementById("magh").innerHTML =  "الحزب 25: (و ما أبرئ نفسي)";
+         document.getElementById("icha").innerHTML ="  الحزب 26: (أفمن يعلم)";
+         break;
+  case 11:
+         document.getElementById("sobh").innerHTML =  "الحزب 27: ⚠️من بداية سورة الحجر";
+         document.getElementById("magh").innerHTML =  "الحزب 28: (و قال الله)";
+         document.getElementById("icha").innerHTML =  "الحزب 29: (سبحان الذي أسرى)";
+         break;
+  case 12:
+         document.getElementById("sobh").innerHTML =  "الحزب 30: (أولم يروا أن الله)";
+         document.getElementById("magh").innerHTML =  "الحزب 31: (قال ألم أقل لك)";
+         document.getElementById("icha").innerHTML =  "الحزب 32: (طه)";
+         break;
+  case 13:
+         document.getElementById("sobh").innerHTML =  "الحزب 33: (اقترب للناس حسابهم)";
+         document.getElementById("magh").innerHTML =  "الحزب 34: (يا أيها الناس)";
+         document.getElementById("icha").innerHTML =  "الحزب 35: (قد أفلح المومنون)";
+         break;
+  case 14:
+         document.getElementById("sobh").innerHTML =  "الحزب 36: (يا أيها الذين آمنوا)";
+         document.getElementById("magh").innerHTML =  "الحزب 37: (وقال الذين )";
+         document.getElementById("icha").innerHTML =  "الحزب 38: (قالوا أنومن)";
+         break;
+  case 15:
+         document.getElementById("sobh").innerHTML =  "الحزب 39: (فما كان جواب قومه)";
+         document.getElementById("magh").innerHTML =  "الحزب 40: (ولقد وصلنا )";
+         document.getElementById("icha").innerHTML =  "الحزب 41: (ولا تجادلوا)";
+         break;
+  case 16:
+         document.getElementById("sobh").innerHTML =  "الحزب 42: (ومن يسلم وجهه)";
+         document.getElementById("magh").innerHTML =  "الحزب 43: (ومن يقنت منكن)";
+         document.getElementById("icha").innerHTML =  "الحزب 44: (قل من يرزقكم)";
+         break;
+  case 17:
+         document.getElementById("sobh").innerHTML = "سورتي الكهف و الدخان";
+         document.getElementById("magh").innerHTML =  "الحزب 45: ⚠️ من بداية سورة يس";
+         document.getElementById("icha").innerHTML =  "الحزب 46: (فنبذناه)";
+         break;
+  case 18:
+         document.getElementById("sobh").innerHTML =  "الحزب 47: (فمن أظلم)";
+         document.getElementById("magh").innerHTML =  "الحزب 48: (ويا قوم مالي ادعوكم )";
+         document.getElementById("icha").innerHTML =  "الحزب 49: (اليه يرد علم الساعة)";
+         break;
+  case 19:
+         document.getElementById("sobh").innerHTML =  "الحزب 50: (قال أولو جئتكم)";
+         document.getElementById("magh").innerHTML =  "الحزب 51: (حم تنزيل الكتاب )";
+         document.getElementById("icha").innerHTML =  "الحزب 52: ( لقد رضي الله)";
+         break;
+  case 20:
+         document.getElementById("sobh").innerHTML =  "الحزب 53: (قال فما خطبكم)";
+         document.getElementById("magh").innerHTML =  "الحزب 54: ( الرحمن)";
+         document.getElementById("icha").innerHTML =  "الحزب 55: (قد سمع)";
+         break;
+  case 21:
+         document.getElementById("sobh").innerHTML = "الحزب 56: ( يسبح )";
+         document.getElementById("magh").innerHTML = "الحزب 57: ( تبارك )";
+         document.getElementById("icha").innerHTML =  "الحزب 58: (قل أوحي )";
+         break;
+      }
+
+    });
+
+    // Événement pour revenir à la date d'aujourd'hui
+    document.getElementById("today").addEventListener("click", function() {
+      today = new Date();
+      arabicDate = today.toLocaleString("ar-SA", {
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+        numberingSystem: "latn"
+      });
+      document.getElementById("date").innerHTML = arabicDate;
+        nextDay=new Date();
+  day=formatDate(nextDay);
+
+
+//formatDate(new Date())
+
+var date1 = new Date("01/04/1922"); 
+var date2 = new Date(day); 
+var Diff_temps = date2.getTime() - date1.getTime(); 
+var Diff_jours = Diff_temps / (1000 * 3600 * 24);
+var z=(Math.round(Diff_jours)%21)+1;
+
+ switch (z) {
+
+  case 1:
+         document.getElementById("sobh").innerHTML = "الحزب 59: ( عم )";
+         document.getElementById("magh").innerHTML = "الحزب 60: ( سبح اسم ربك الاعلى )";
+         document.getElementById("icha").innerHTML = "الحزب 1: (ألم ) ";
+         break;
+  case 2:
+         document.getElementById("sobh").innerHTML =  "الحزب 2: ( وإذا لقوا ) ";
+         document.getElementById("magh").innerHTML =  "الحزب 3: ( سيقول ) ";
+         document.getElementById("icha").innerHTML = "الحزب 4: (واذكروا الله )";
+         break;
+  case 3:
+         document.getElementById("sobh").innerHTML ="سورتي الكهف و الدخان";
+         document.getElementById("magh").innerHTML = "الحزب 5: (تلك الرسل)";
+         document.getElementById("icha").innerHTML = "الحزب 6: (قل أونبئكم )";
+         break;
+  case 4:
+         document.getElementById("sobh").innerHTML =  "الحزب 7: (لن تنالوا البر حتى تنفقوا مما تحبون)";
+         document.getElementById("magh").innerHTML =  "الحزب 8: ( يستبشرون )";
+         document.getElementById("icha").innerHTML =  "الحزب 9: ( والمحصنات )";
+         break;
+  case 5:
+         document.getElementById("sobh").innerHTML =  "الحزب 10: ( الله لا إله إلا هو )";
+         document.getElementById("magh").innerHTML =  "الحزب 11: ( لا يحب الله الجهر بالسوء  )";
+         document.getElementById("icha").innerHTML =  "الحزب 12: ( قال رجلان )";
+         break;
+  case 6:
+         document.getElementById("sobh").innerHTML =  "الحزب 13: (لتجدن)";
+         document.getElementById("magh").innerHTML ="الحزب 14: (إنما يستجيب)";
+         document.getElementById("icha").innerHTML = "الحزب 15: ( و لو أننا )";
+         break;
+  case 7:
+         document.getElementById("sobh").innerHTML = "الحزب 16: ⚠️من أول سورة الأعراف";
+         document.getElementById("magh").innerHTML = "الحزب 17: (قال الملأ)";
+         document.getElementById("icha").innerHTML =  "الحزب 18: (و إذ نتقنا)";
+         break;
+  case 8:
+         document.getElementById("sobh").innerHTML =  "الحزب 19: (و اعلموا)";
+         document.getElementById("magh").innerHTML =  "الحزب 20: (يا أيها الذين ءامنوا إن كثيرا)";
+         document.getElementById("icha").innerHTML =  "الحزب 21: (إنما السبيل)";
+         break;
+  case 9:
+         document.getElementById("sobh").innerHTML =  "الحزب 22: (للذين أحسنوا الحسنى)";
+         document.getElementById("magh").innerHTML =  "الحزب 23: ⚠️من بداية سورة هود ";
+         document.getElementById("icha").innerHTML =  "الحزب 24: (و إلى مدين)";
+         break;
+  case 10:
+         document.getElementById("sobh").innerHTML = "سورتي الكهف و الدخان";
+         document.getElementById("magh").innerHTML =  "الحزب 25: (و ما أبرئ نفسي)";
+         document.getElementById("icha").innerHTML ="  الحزب 26: (أفمن يعلم)";
+         break;
+  case 11:
+         document.getElementById("sobh").innerHTML =  "الحزب 27: ⚠️من بداية سورة الحجر";
+         document.getElementById("magh").innerHTML =  "الحزب 28: (و قال الله)";
+         document.getElementById("icha").innerHTML =  "الحزب 29: (سبحان الذي أسرى)";
+         break;
+  case 12:
+         document.getElementById("sobh").innerHTML =  "الحزب 30: (أولم يروا أن الله)";
+         document.getElementById("magh").innerHTML =  "الحزب 31: (قال ألم أقل لك)";
+         document.getElementById("icha").innerHTML =  "الحزب 32: (طه)";
+         break;
+  case 13:
+         document.getElementById("sobh").innerHTML =  "الحزب 33: (اقترب للناس حسابهم)";
+         document.getElementById("magh").innerHTML =  "الحزب 34: (يا أيها الناس)";
+         document.getElementById("icha").innerHTML =  "الحزب 35: (قد أفلح المومنون)";
+         break;
+  case 14:
+         document.getElementById("sobh").innerHTML =  "الحزب 36: (يا أيها الذين آمنوا)";
+         document.getElementById("magh").innerHTML =  "الحزب 37: (وقال الذين )";
+         document.getElementById("icha").innerHTML =  "الحزب 38: (قالوا أنومن)";
+         break;
+  case 15:
+         document.getElementById("sobh").innerHTML =  "الحزب 39: (فما كان جواب قومه)";
+         document.getElementById("magh").innerHTML =  "الحزب 40: (ولقد وصلنا )";
+         document.getElementById("icha").innerHTML =  "الحزب 41: (ولا تجادلوا)";
+         break;
+  case 16:
+         document.getElementById("sobh").innerHTML =  "الحزب 42: (ومن يسلم وجهه)";
+         document.getElementById("magh").innerHTML =  "الحزب 43: (ومن يقنت منكن)";
+         document.getElementById("icha").innerHTML =  "الحزب 44: (قل من يرزقكم)";
+         break;
+  case 17:
+         document.getElementById("sobh").innerHTML = "سورتي الكهف و الدخان";
+         document.getElementById("magh").innerHTML =  "الحزب 45: ⚠️ من بداية سورة يس";
+         document.getElementById("icha").innerHTML =  "الحزب 46: (فنبذناه)";
+         break;
+  case 18:
+         document.getElementById("sobh").innerHTML =  "الحزب 47: (فمن أظلم)";
+         document.getElementById("magh").innerHTML =  "الحزب 48: (ويا قوم مالي ادعوكم )";
+         document.getElementById("icha").innerHTML =  "الحزب 49: (اليه يرد علم الساعة)";
+         break;
+  case 19:
+         document.getElementById("sobh").innerHTML =  "الحزب 50: (قال أولو جئتكم)";
+         document.getElementById("magh").innerHTML =  "الحزب 51: (حم تنزيل الكتاب )";
+         document.getElementById("icha").innerHTML =  "الحزب 52: ( لقد رضي الله)";
+         break;
+  case 20:
+         document.getElementById("sobh").innerHTML =  "الحزب 53: (قال فما خطبكم)";
+         document.getElementById("magh").innerHTML =  "الحزب 54: ( الرحمن)";
+         document.getElementById("icha").innerHTML =  "الحزب 55: (قد سمع)";
+         break;
+  case 21:
+         document.getElementById("sobh").innerHTML = "الحزب 56: ( يسبح )";
+         document.getElementById("magh").innerHTML = "الحزب 57: ( تبارك )";
+         document.getElementById("icha").innerHTML =  "الحزب 58: (قل أوحي )";
+         break;
+      }
+
+    });
+
+    // Événement pour avancer la date
+    document.getElementById("next").addEventListener("click", function() {
+      changeDate(1);
+        nextDay.setDate(nextDay.getDate() + 1);
+  day=formatDate(nextDay);
+
+
+//formatDate(new Date())
+
+var date1 = new Date("01/04/1922"); 
+var date2 = new Date(day); 
+var Diff_temps = date2.getTime() - date1.getTime(); 
+var Diff_jours = Diff_temps / (1000 * 3600 * 24);
+var z=(Math.round(Diff_jours)%21)+1;
+
+ switch (z) {
+
+  case 1:
+         document.getElementById("sobh").innerHTML = "الحزب 59: ( عم )";
+         document.getElementById("magh").innerHTML = "الحزب 60: ( سبح اسم ربك الاعلى )";
+         document.getElementById("icha").innerHTML = "الحزب 1: (ألم ) ";
+         break;
+  case 2:
+         document.getElementById("sobh").innerHTML =  "الحزب 2: ( وإذا لقوا ) ";
+         document.getElementById("magh").innerHTML =  "الحزب 3: ( سيقول ) ";
+         document.getElementById("icha").innerHTML = "الحزب 4: (واذكروا الله )";
+         break;
+  case 3:
+         document.getElementById("sobh").innerHTML ="سورتي الكهف و الدخان";
+         document.getElementById("magh").innerHTML = "الحزب 5: (تلك الرسل)";
+         document.getElementById("icha").innerHTML = "الحزب 6: (قل أونبئكم )";
+         break;
+  case 4:
+         document.getElementById("sobh").innerHTML =  "الحزب 7: (لن تنالوا البر حتى تنفقوا مما تحبون)";
+         document.getElementById("magh").innerHTML =  "الحزب 8: ( يستبشرون )";
+         document.getElementById("icha").innerHTML =  "الحزب 9: ( والمحصنات )";
+         break;
+  case 5:
+         document.getElementById("sobh").innerHTML =  "الحزب 10: ( الله لا إله إلا هو )";
+         document.getElementById("magh").innerHTML =  "الحزب 11: ( لا يحب الله الجهر بالسوء  )";
+         document.getElementById("icha").innerHTML =  "الحزب 12: ( قال رجلان )";
+         break;
+  case 6:
+         document.getElementById("sobh").innerHTML =  "الحزب 13: (لتجدن)";
+         document.getElementById("magh").innerHTML ="الحزب 14: (إنما يستجيب)";
+         document.getElementById("icha").innerHTML = "الحزب 15: ( و لو أننا )";
+         break;
+  case 7:
+         document.getElementById("sobh").innerHTML = "الحزب 16: ⚠️من أول سورة الأعراف";
+         document.getElementById("magh").innerHTML = "الحزب 17: (قال الملأ)";
+         document.getElementById("icha").innerHTML =  "الحزب 18: (و إذ نتقنا)";
+         break;
+  case 8:
+         document.getElementById("sobh").innerHTML =  "الحزب 19: (و اعلموا)";
+         document.getElementById("magh").innerHTML =  "الحزب 20: (يا أيها الذين ءامنوا إن كثيرا)";
+         document.getElementById("icha").innerHTML =  "الحزب 21: (إنما السبيل)";
+         break;
+  case 9:
+         document.getElementById("sobh").innerHTML =  "الحزب 22: (للذين أحسنوا الحسنى)";
+         document.getElementById("magh").innerHTML =  "الحزب 23: ⚠️من بداية سورة هود ";
+         document.getElementById("icha").innerHTML =  "الحزب 24: (و إلى مدين)";
+         break;
+  case 10:
+         document.getElementById("sobh").innerHTML = "سورتي الكهف و الدخان";
+         document.getElementById("magh").innerHTML =  "الحزب 25: (و ما أبرئ نفسي)";
+         document.getElementById("icha").innerHTML ="  الحزب 26: (أفمن يعلم)";
+         break;
+  case 11:
+         document.getElementById("sobh").innerHTML =  "الحزب 27: ⚠️من بداية سورة الحجر";
+         document.getElementById("magh").innerHTML =  "الحزب 28: (و قال الله)";
+         document.getElementById("icha").innerHTML =  "الحزب 29: (سبحان الذي أسرى)";
+         break;
+  case 12:
+         document.getElementById("sobh").innerHTML =  "الحزب 30: (أولم يروا أن الله)";
+         document.getElementById("magh").innerHTML =  "الحزب 31: (قال ألم أقل لك)";
+         document.getElementById("icha").innerHTML =  "الحزب 32: (طه)";
+         break;
+  case 13:
+         document.getElementById("sobh").innerHTML =  "الحزب 33: (اقترب للناس حسابهم)";
+         document.getElementById("magh").innerHTML =  "الحزب 34: (يا أيها الناس)";
+         document.getElementById("icha").innerHTML =  "الحزب 35: (قد أفلح المومنون)";
+         break;
+  case 14:
+         document.getElementById("sobh").innerHTML =  "الحزب 36: (يا أيها الذين آمنوا)";
+         document.getElementById("magh").innerHTML =  "الحزب 37: (وقال الذين )";
+         document.getElementById("icha").innerHTML =  "الحزب 38: (قالوا أنومن)";
+         break;
+  case 15:
+         document.getElementById("sobh").innerHTML =  "الحزب 39: (فما كان جواب قومه)";
+         document.getElementById("magh").innerHTML =  "الحزب 40: (ولقد وصلنا )";
+         document.getElementById("icha").innerHTML =  "الحزب 41: (ولا تجادلوا)";
+         break;
+  case 16:
+         document.getElementById("sobh").innerHTML =  "الحزب 42: (ومن يسلم وجهه)";
+         document.getElementById("magh").innerHTML =  "الحزب 43: (ومن يقنت منكن)";
+         document.getElementById("icha").innerHTML =  "الحزب 44: (قل من يرزقكم)";
+         break;
+  case 17:
+         document.getElementById("sobh").innerHTML = "سورتي الكهف و الدخان";
+         document.getElementById("magh").innerHTML =  "الحزب 45: ⚠️ من بداية سورة يس";
+         document.getElementById("icha").innerHTML =  "الحزب 46: (فنبذناه)";
+         break;
+  case 18:
+         document.getElementById("sobh").innerHTML =  "الحزب 47: (فمن أظلم)";
+         document.getElementById("magh").innerHTML =  "الحزب 48: (ويا قوم مالي ادعوكم )";
+         document.getElementById("icha").innerHTML =  "الحزب 49: (اليه يرد علم الساعة)";
+         break;
+  case 19:
+         document.getElementById("sobh").innerHTML =  "الحزب 50: (قال أولو جئتكم)";
+         document.getElementById("magh").innerHTML =  "الحزب 51: (حم تنزيل الكتاب )";
+         document.getElementById("icha").innerHTML =  "الحزب 52: ( لقد رضي الله)";
+         break;
+  case 20:
+         document.getElementById("sobh").innerHTML =  "الحزب 53: (قال فما خطبكم)";
+         document.getElementById("magh").innerHTML =  "الحزب 54: ( الرحمن)";
+         document.getElementById("icha").innerHTML =  "الحزب 55: (قد سمع)";
+         break;
+  case 21:
+         document.getElementById("sobh").innerHTML = "الحزب 56: ( يسبح )";
+         document.getElementById("magh").innerHTML = "الحزب 57: ( تبارك )";
+         document.getElementById("icha").innerHTML =  "الحزب 58: (قل أوحي )";
+         break;
+      }
+
+    });
+  </script>
+    
+
+<script>
+function padTo2Digits(num) {
+  return num.toString().padStart(2, '0');
+}
+
+function formatDate(date) {
+  return [
+    padTo2Digits(date.getMonth() + 1),
+    padTo2Digits(date.getDate()),
+    date.getFullYear(),
+  ].join('/');
+}
+//formatDate(new Date())
+var nextDay = new Date();
+var day=formatDate(new Date());
+var date1 = new Date("01/04/1922"); 
+var date2 = new Date(day); 
+var Diff_temps = date2.getTime() - date1.getTime(); 
+var Diff_jours = Diff_temps / (1000 * 3600 * 24);
+var z=(Math.round(Diff_jours)%21)+1;
+
+ switch (z) {
+
+  case 1:
+         document.getElementById("sobh").innerHTML = "الحزب 59: ( عم )";
+         document.getElementById("magh").innerHTML = "الحزب 60: ( سبح اسم ربك الاعلى )";
+         document.getElementById("icha").innerHTML = "الحزب 1: (ألم ) ";
+         break;
+  case 2:
+         document.getElementById("sobh").innerHTML =  "الحزب 2: ( وإذا لقوا ) ";
+         document.getElementById("magh").innerHTML =  "الحزب 3: ( سيقول ) ";
+         document.getElementById("icha").innerHTML = "الحزب 4: (واذكروا الله )";
+         break;
+  case 3:
+         document.getElementById("sobh").innerHTML ="سورتي الكهف و الدخان";
+         document.getElementById("magh").innerHTML = "الحزب 5: (تلك الرسل)";
+         document.getElementById("icha").innerHTML = "الحزب 6: (قل أونبئكم )";
+         break;
+  case 4:
+         document.getElementById("sobh").innerHTML =  "الحزب 7: (لن تنالوا البر حتى تنفقوا مما تحبون)";
+         document.getElementById("magh").innerHTML =  "الحزب 8: ( يستبشرون )";
+         document.getElementById("icha").innerHTML =  "الحزب 9: ( والمحصنات )";
+         break;
+  case 5:
+         document.getElementById("sobh").innerHTML =  "الحزب 10: ( الله لا إله إلا هو )";
+         document.getElementById("magh").innerHTML =  "الحزب 11: ( لا يحب الله الجهر بالسوء  )";
+         document.getElementById("icha").innerHTML =  "الحزب 12: ( قال رجلان )";
+         break;
+  case 6:
+         document.getElementById("sobh").innerHTML =  "الحزب 13: (لتجدن)";
+         document.getElementById("magh").innerHTML ="الحزب 14: (إنما يستجيب)";
+         document.getElementById("icha").innerHTML = "الحزب 15: ( و لو أننا )";
+         break;
+  case 7:
+         document.getElementById("sobh").innerHTML = "الحزب 16: ⚠️من أول سورة الأعراف";
+         document.getElementById("magh").innerHTML = "الحزب 17: (قال الملأ)";
+         document.getElementById("icha").innerHTML =  "الحزب 18: (و إذ نتقنا)";
+         break;
+  case 8:
+         document.getElementById("sobh").innerHTML =  "الحزب 19: (و اعلموا)";
+         document.getElementById("magh").innerHTML =  "الحزب 20: (يا أيها الذين ءامنوا إن كثيرا)";
+         document.getElementById("icha").innerHTML =  "الحزب 21: (إنما السبيل)";
+         break;
+  case 9:
+         document.getElementById("sobh").innerHTML =  "الحزب 22: (للذين أحسنوا الحسنى)";
+         document.getElementById("magh").innerHTML =  "الحزب 23: ⚠️من بداية سورة هود ";
+         document.getElementById("icha").innerHTML =  "الحزب 24: (و إلى مدين)";
+         break;
+  case 10:
+         document.getElementById("sobh").innerHTML = "سورتي الكهف و الدخان";
+         document.getElementById("magh").innerHTML =  "الحزب 25: (و ما أبرئ نفسي)";
+         document.getElementById("icha").innerHTML ="  الحزب 26: (أفمن يعلم)";
+         break;
+  case 11:
+         document.getElementById("sobh").innerHTML =  "الحزب 27: ⚠️من بداية سورة الحجر";
+         document.getElementById("magh").innerHTML =  "الحزب 28: (و قال الله)";
+         document.getElementById("icha").innerHTML =  "الحزب 29: (سبحان الذي أسرى)";
+         break;
+  case 12:
+         document.getElementById("sobh").innerHTML =  "الحزب 30: (أولم يروا أن الله)";
+         document.getElementById("magh").innerHTML =  "الحزب 31: (قال ألم أقل لك)";
+         document.getElementById("icha").innerHTML =  "الحزب 32: (طه)";
+         break;
+  case 13:
+         document.getElementById("sobh").innerHTML =  "الحزب 33: (اقترب للناس حسابهم)";
+         document.getElementById("magh").innerHTML =  "الحزب 34: (يا أيها الناس)";
+         document.getElementById("icha").innerHTML =  "الحزب 35: (قد أفلح المومنون)";
+         break;
+  case 14:
+         document.getElementById("sobh").innerHTML =  "الحزب 36: (يا أيها الذين آمنوا)";
+         document.getElementById("magh").innerHTML =  "الحزب 37: (وقال الذين )";
+         document.getElementById("icha").innerHTML =  "الحزب 38: (قالوا أنومن)";
+         break;
+  case 15:
+         document.getElementById("sobh").innerHTML =  "الحزب 39: (فما كان جواب قومه)";
+         document.getElementById("magh").innerHTML =  "الحزب 40: (ولقد وصلنا )";
+         document.getElementById("icha").innerHTML =  "الحزب 41: (ولا تجادلوا)";
+         break;
+  case 16:
+         document.getElementById("sobh").innerHTML =  "الحزب 42: (ومن يسلم وجهه)";
+         document.getElementById("magh").innerHTML =  "الحزب 43: (ومن يقنت منكن)";
+         document.getElementById("icha").innerHTML =  "الحزب 44: (قل من يرزقكم)";
+         break;
+  case 17:
+         document.getElementById("sobh").innerHTML = "سورتي الكهف و الدخان";
+         document.getElementById("magh").innerHTML =  "الحزب 45: ⚠️ من بداية سورة يس";
+         document.getElementById("icha").innerHTML =  "الحزب 46: (فنبذناه)";
+         break;
+  case 18:
+         document.getElementById("sobh").innerHTML =  "الحزب 47: (فمن أظلم)";
+         document.getElementById("magh").innerHTML =  "الحزب 48: (ويا قوم مالي ادعوكم )";
+         document.getElementById("icha").innerHTML =  "الحزب 49: (اليه يرد علم الساعة)";
+         break;
+  case 19:
+         document.getElementById("sobh").innerHTML =  "الحزب 50: (قال أولو جئتكم)";
+         document.getElementById("magh").innerHTML =  "الحزب 51: (حم تنزيل الكتاب )";
+         document.getElementById("icha").innerHTML =  "الحزب 52: ( لقد رضي الله)";
+         break;
+  case 20:
+         document.getElementById("sobh").innerHTML =  "الحزب 53: (قال فما خطبكم)";
+         document.getElementById("magh").innerHTML =  "الحزب 54: ( الرحمن)";
+         document.getElementById("icha").innerHTML =  "الحزب 55: (قد سمع)";
+         break;
+  case 21:
+         document.getElementById("sobh").innerHTML = "الحزب 56: ( يسبح )";
+         document.getElementById("magh").innerHTML = "الحزب 57: ( تبارك )";
+         document.getElementById("icha").innerHTML =  "الحزب 58: (قل أوحي )";
+         break;
+      }
+ 
+</script>
+</body>
+</html>

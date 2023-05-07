@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>الحزب الراتب لشيخنا الشيخ ماء العينين رضي الله عنه و أرضاه</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Amiri&display=swap" rel="stylesheet">
+
+  <style>
+      h1 {
+    font-family: 'Amiri', serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+  body {
+    background-image: url("Smara.jpeg");
+    background-size: cover;
+  }
+      body {
+			font-family: 'Amiri', serif;
+			font-size: 22px;
+			text-align: center;
+		}
+       .text-center {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+      .table-centered {
+  margin: 0 auto;
+}
+  </style>
+</head>
+<body class="d-flex justify-content-center">
+ 
+
+  <div class="text-center">
+  <h1>الحزب الراتب لشيخنا الشيخ ماء العينين<br>رضي الله عنه و أرضاه </h1>
+  <h5><p id="date"></p></h5>
+  <button id="previous" class="btn btn-primary">السابق</button>
+  <button id="today" class="btn btn-primary mx-2">اليوم</button>
+  <button id="next" class="btn btn-primary">اللاحق</button>
+           <div>
+<h4></h4>
+</div>
+    
+   <div class="blog-post-des">
+                             <h5 style="text-align: center;">♦️مجموع ما يُتلى في حزب المغرب♦️</h5>
+                             <h5 id="magh" style="text-align: center;"></h5>
+                             <p style=" text-align: center;">سورة يس▪️ <br />&nbsp;سورة الصف▪️ <br />&nbsp;قريش ثلاثا▪️ <br />&nbsp;" الحمد لله الذي هدانا لهذا وما كنا لنهتدي لولا أن هدانا الله"▪️ <br />&nbsp;الفاتحة خمس مرات▪️</p>
+                           
+                             <p id="waqf" style=" text-align: center;"></p>
+                             <p id="doaa" style=" text-align: center;"></p>
+                             <p id="istijaba" style=" text-align: center;"></p>
+                              
+                         </div>
+
+</div>
+
+
+
+  <script>
+    // Récupérer la date actuelle
+    var today = new Date();
+
+    // Afficher la date en format jour/mois/année en arabe
+    var arabicDate = today.toLocaleString("ar-SA", {
+      weekday: "long",
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+      numberingSystem: "latn"
+    });
+    document.getElementById("date").innerHTML = arabicDate;
+
+    // Fonction pour avancer/reculer la date
+    function changeDate(offset) {
+      today.setDate(today.getDate() + offset);
+      arabicDate = today.toLocaleString("ar-SA", {
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+        numberingSystem: "latn"
+      });
+      document.getElementById("date").innerHTML = arabicDate;
+    }
+
+    // Événement pour reculer la date
+    document.getElementById("previous").addEventListener("click", function() {
+      changeDate(-1);
+        nextDay.setDate(nextDay.getDate() - 1);
+  day=formatDate(nextDay);
+
+
+//formatDate(new Date())
+
+var date1 = new Date("01/04/1922"); 
+var date2 = new Date(day); 
+var Diff_temps = date2.getTime() - date1.getTime(); 
+var Diff_jours = Diff_temps / (1000 * 3600 * 24);
+var z=(Math.round(Diff_jours)%21)+1;
+
+switch (z) {
+
+  case 1:
+         document.getElementById("magh").innerHTML = "الحزب 60: ( سبح اسم ربك الاعلى )";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "🔰تنبيه: دعاء وقف🔰<br />دعاء الختم<br />ومن عادة شيخنا، رضي الله عنه ليلة الختم اذا بلغ سورة الاخلاص أن يرفع هو والقارئَيْن الراتبين أيديهم للدعاء ويقرأ الاخلاص ثلاثا والمعوذتين، ثم يقرأ الفاتحة، ثم يقرأ   ( ألم ذلك الكتاب لا ريب فيه هدى للمتقين . الذين يومنون بالغيب ويقيمون الصلاة ومما رزقناهم ينفقون. والذين يومنون بما أنزل اليك وما انزل من قبلك وبالاخرة هم يوقنون. أولئك على هدى من ربهم وأولئك هم المفلحون ) البقرة 1 - 5 . <br />ثم يقول: <  اللهم اجعلنا على هدى منك واجعلنا من المفلحين > ثلاثا.  ثم يقول < الحمد لله الذي هدانا لهذا وما كنا لنهتدي لولا أن هدانا الله > ثم يدعو أحد القارئين بالدعاء المتقدم بعد الفاتحة خمسا، ثم يقرأ يس والصف قبل قريش ثلاثا، على العادة . ثم يعيد الدعاء أيضا على حاله المذكور.";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 2:
+         document.getElementById("magh").innerHTML =  "الحزب 3: ( سيقول ) ";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "🔰تنبيه: موضع إستجابة🔰<br />عند قوله تعالى ( و إذا سألك عبادي عني فإني قريب) البقرة 187 ";
+         break;
+  case 3:
+         document.getElementById("magh").innerHTML = "الحزب 5: (تلك الرسل)";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى ( والله عنده حسن المآب ) آل عمران  14";
+         document.getElementById("doaa").innerHTML = "🔰تنبيه: دعاء وقف🔰<br />  اللهم إني أسألك حسن المآب ";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 4:
+         document.getElementById("magh").innerHTML =  "الحزب 8: ( يستبشرون )";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 5:
+         document.getElementById("magh").innerHTML =  "الحزب 11: ( لا يحب الله الجهر بالسوء  )";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى ( قال رجلان من الذين يخافون انعم الله عليهما ادخلوا عليهم الباب فإذا دخلتموه فإنكم غالبون  و على الله فتوكلوا إن كنتم مومنين ) المائدة 25";
+         document.getElementById("doaa").innerHTML = "🔰تنبيه: دعاء وقف🔰<br />  آمنا بالله وعليه توكلنا ";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 6:
+         document.getElementById("magh").innerHTML ="الحزب 14: (إنما يستجيب)";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى ( و لو أننا أنزلنا إليهم الملائكة وكلمهم الموتى وحشرنا عليهم كل شيء قبلا ما كانوا ليومنوا إلا أن يشاء الله ) الأنعام 112";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 7:
+         document.getElementById("magh").innerHTML = "الحزب 17: (قال الملأ)";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى ( إنا لا نضيع اجر المصلحين ) الأعراف 170";
+         document.getElementById("doaa").innerHTML = "🔰تنبيه: دعاء وقف🔰<br /> اللهم اجعلنا من مصلحين ";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 8:
+         document.getElementById("magh").innerHTML =  "الحزب 20: (يا أيها الذين ءامنوا إن كثيرا)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 9:
+         document.getElementById("magh").innerHTML =  "الحزب 23: ⚠️من بداية سورة هود ";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "🔰تنبيه: موضع إستجابة🔰<br />عند قوله تعالى (هو أنشأكم من الأرض و استعمركم فيها فاستغفروه ثم توبوا إليه إن ربي قريب) هود  61 ";
+         break;
+  case 10:
+         document.getElementById("magh").innerHTML =  "الحزب 25: (و ما أبرئ نفسي)";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى ( أفمن يعلم أنما انزل اليك من ربك الحق كمن هو أعمى إنما يتذكر أولوا الألباب ) الرعد 21";
+         document.getElementById("doaa").innerHTML = "🔰تنبيه: دعاء وقف🔰<br />اللهم اجعلنا من أولي الألباب ";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 11:
+         document.getElementById("magh").innerHTML =  "الحزب 28: (و قال الله)";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى ( إن الله مع الذين اتقوا والذين هم محسنون) النحل 128";
+         document.getElementById("doaa").innerHTML = "🔰تنبيه: دعاء وقف🔰<br /> اللهم اجعلنا من الذين اتقوا والذين هم محسنون ";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 12:
+         document.getElementById("magh").innerHTML =  "الحزب 31: (قال ألم أقل لك)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 13:
+         document.getElementById("magh").innerHTML =  "الحزب 34: (يا أيها الناس)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 14:
+         document.getElementById("magh").innerHTML =  "الحزب 37: (وقال الذين )";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 15:
+         document.getElementById("magh").innerHTML =  "الحزب 40: (ولقد وصلنا )";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 16:
+         document.getElementById("magh").innerHTML =  "الحزب 43: (ومن يقنت منكن)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 17:
+         document.getElementById("magh").innerHTML =  "الحزب 45: ⚠️ من بداية سورة يس";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 18:
+         document.getElementById("magh").innerHTML =  "الحزب 48: (ويا قوم مالي ادعوكم )";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "🔰تنبيه: موضع إستجابة🔰<br />عند قوله تعالى( و قال ربكم ادعوني) غافر 60";
+         break;
+  case 19:
+         document.getElementById("magh").innerHTML =  "الحزب 51: (حم تنزيل الكتاب )";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى (ومغانم كثيرة يأخذونها ) الفتح 18";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 20:
+         document.getElementById("magh").innerHTML =  "الحزب 54: ( الرحمن)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 21:
+         document.getElementById("magh").innerHTML = "الحزب 57: ( تبارك )";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+      }
+
+    });
+
+    // Événement pour revenir à la date d'aujourd'hui
+    document.getElementById("today").addEventListener("click", function() {
+      today = new Date();
+      arabicDate = today.toLocaleString("ar-SA", {
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+        numberingSystem: "latn"
+      });
+      document.getElementById("date").innerHTML = arabicDate;
+        // ici today
+        nextDay=new Date();
+  day=formatDate(nextDay);
+
+
+//formatDate(new Date())
+
+var date1 = new Date("01/04/1922"); 
+var date2 = new Date(day); 
+var Diff_temps = date2.getTime() - date1.getTime(); 
+var Diff_jours = Diff_temps / (1000 * 3600 * 24);
+var z=(Math.round(Diff_jours)%21)+1;
+
+switch (z) {
+
+  case 1:
+         document.getElementById("magh").innerHTML = "الحزب 60: ( سبح اسم ربك الاعلى )";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "🔰تنبيه: دعاء وقف🔰<br />دعاء الختم<br />ومن عادة شيخنا، رضي الله عنه ليلة الختم اذا بلغ سورة الاخلاص أن يرفع هو والقارئَيْن الراتبين أيديهم للدعاء ويقرأ الاخلاص ثلاثا والمعوذتين، ثم يقرأ الفاتحة، ثم يقرأ   ( ألم ذلك الكتاب لا ريب فيه هدى للمتقين . الذين يومنون بالغيب ويقيمون الصلاة ومما رزقناهم ينفقون. والذين يومنون بما أنزل اليك وما انزل من قبلك وبالاخرة هم يوقنون. أولئك على هدى من ربهم وأولئك هم المفلحون ) البقرة 1 - 5 . <br />ثم يقول: <  اللهم اجعلنا على هدى منك واجعلنا من المفلحين > ثلاثا.  ثم يقول < الحمد لله الذي هدانا لهذا وما كنا لنهتدي لولا أن هدانا الله > ثم يدعو أحد القارئين بالدعاء المتقدم بعد الفاتحة خمسا، ثم يقرأ يس والصف قبل قريش ثلاثا، على العادة . ثم يعيد الدعاء أيضا على حاله المذكور.";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 2:
+         document.getElementById("magh").innerHTML =  "الحزب 3: ( سيقول ) ";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "🔰تنبيه: موضع إستجابة🔰<br />عند قوله تعالى ( و إذا سألك عبادي عني فإني قريب) البقرة 187 ";
+         break;
+  case 3:
+         document.getElementById("magh").innerHTML = "الحزب 5: (تلك الرسل)";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى ( والله عنده حسن المآب ) آل عمران  14";
+         document.getElementById("doaa").innerHTML = "🔰تنبيه: دعاء وقف🔰<br />  اللهم إني أسألك حسن المآب ";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 4:
+         document.getElementById("magh").innerHTML =  "الحزب 8: ( يستبشرون )";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 5:
+         document.getElementById("magh").innerHTML =  "الحزب 11: ( لا يحب الله الجهر بالسوء  )";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى ( قال رجلان من الذين يخافون انعم الله عليهما ادخلوا عليهم الباب فإذا دخلتموه فإنكم غالبون  و على الله فتوكلوا إن كنتم مومنين ) المائدة 25";
+         document.getElementById("doaa").innerHTML = "🔰تنبيه: دعاء وقف🔰<br />  آمنا بالله وعليه توكلنا ";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 6:
+         document.getElementById("magh").innerHTML ="الحزب 14: (إنما يستجيب)";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى ( و لو أننا أنزلنا إليهم الملائكة وكلمهم الموتى وحشرنا عليهم كل شيء قبلا ما كانوا ليومنوا إلا أن يشاء الله ) الأنعام 112";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 7:
+         document.getElementById("magh").innerHTML = "الحزب 17: (قال الملأ)";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى ( إنا لا نضيع اجر المصلحين ) الأعراف 170";
+         document.getElementById("doaa").innerHTML = "🔰تنبيه: دعاء وقف🔰<br /> اللهم اجعلنا من مصلحين ";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 8:
+         document.getElementById("magh").innerHTML =  "الحزب 20: (يا أيها الذين ءامنوا إن كثيرا)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 9:
+         document.getElementById("magh").innerHTML =  "الحزب 23: ⚠️من بداية سورة هود ";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "🔰تنبيه: موضع إستجابة🔰<br />عند قوله تعالى (هو أنشأكم من الأرض و استعمركم فيها فاستغفروه ثم توبوا إليه إن ربي قريب) هود  61 ";
+         break;
+  case 10:
+         document.getElementById("magh").innerHTML =  "الحزب 25: (و ما أبرئ نفسي)";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى ( أفمن يعلم أنما انزل اليك من ربك الحق كمن هو أعمى إنما يتذكر أولوا الألباب ) الرعد 21";
+         document.getElementById("doaa").innerHTML = "🔰تنبيه: دعاء وقف🔰<br />اللهم اجعلنا من أولي الألباب ";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 11:
+         document.getElementById("magh").innerHTML =  "الحزب 28: (و قال الله)";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى ( إن الله مع الذين اتقوا والذين هم محسنون) النحل 128";
+         document.getElementById("doaa").innerHTML = "🔰تنبيه: دعاء وقف🔰<br /> اللهم اجعلنا من الذين اتقوا والذين هم محسنون ";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 12:
+         document.getElementById("magh").innerHTML =  "الحزب 31: (قال ألم أقل لك)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 13:
+         document.getElementById("magh").innerHTML =  "الحزب 34: (يا أيها الناس)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 14:
+         document.getElementById("magh").innerHTML =  "الحزب 37: (وقال الذين )";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 15:
+         document.getElementById("magh").innerHTML =  "الحزب 40: (ولقد وصلنا )";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 16:
+         document.getElementById("magh").innerHTML =  "الحزب 43: (ومن يقنت منكن)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 17:
+         document.getElementById("magh").innerHTML =  "الحزب 45: ⚠️ من بداية سورة يس";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 18:
+         document.getElementById("magh").innerHTML =  "الحزب 48: (ويا قوم مالي ادعوكم )";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "🔰تنبيه: موضع إستجابة🔰<br />عند قوله تعالى( و قال ربكم ادعوني) غافر 60";
+         break;
+  case 19:
+         document.getElementById("magh").innerHTML =  "الحزب 51: (حم تنزيل الكتاب )";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى (ومغانم كثيرة يأخذونها ) الفتح 18";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 20:
+         document.getElementById("magh").innerHTML =  "الحزب 54: ( الرحمن)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 21:
+         document.getElementById("magh").innerHTML = "الحزب 57: ( تبارك )";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+      }
+
+    });
+
+    // Événement pour avancer la date
+    document.getElementById("next").addEventListener("click", function() {
+      changeDate(1);
+        //ici +1
+        
+        nextDay.setDate(nextDay.getDate() + 1);
+  day=formatDate(nextDay);
+
+
+//formatDate(new Date())
+
+var date1 = new Date("01/04/1922"); 
+var date2 = new Date(day); 
+var Diff_temps = date2.getTime() - date1.getTime(); 
+var Diff_jours = Diff_temps / (1000 * 3600 * 24);
+var z=(Math.round(Diff_jours)%21)+1;
+
+ switch (z) {
+
+  case 1:
+         document.getElementById("magh").innerHTML = "الحزب 60: ( سبح اسم ربك الاعلى )";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "🔰تنبيه: دعاء وقف🔰<br />دعاء الختم<br />ومن عادة شيخنا، رضي الله عنه ليلة الختم اذا بلغ سورة الاخلاص أن يرفع هو والقارئَيْن الراتبين أيديهم للدعاء ويقرأ الاخلاص ثلاثا والمعوذتين، ثم يقرأ الفاتحة، ثم يقرأ   ( ألم ذلك الكتاب لا ريب فيه هدى للمتقين . الذين يومنون بالغيب ويقيمون الصلاة ومما رزقناهم ينفقون. والذين يومنون بما أنزل اليك وما انزل من قبلك وبالاخرة هم يوقنون. أولئك على هدى من ربهم وأولئك هم المفلحون ) البقرة 1 - 5 . <br />ثم يقول: <  اللهم اجعلنا على هدى منك واجعلنا من المفلحين > ثلاثا.  ثم يقول < الحمد لله الذي هدانا لهذا وما كنا لنهتدي لولا أن هدانا الله > ثم يدعو أحد القارئين بالدعاء المتقدم بعد الفاتحة خمسا، ثم يقرأ يس والصف قبل قريش ثلاثا، على العادة . ثم يعيد الدعاء أيضا على حاله المذكور.";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 2:
+         document.getElementById("magh").innerHTML =  "الحزب 3: ( سيقول ) ";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "🔰تنبيه: موضع إستجابة🔰<br />عند قوله تعالى ( و إذا سألك عبادي عني فإني قريب) البقرة 187 ";
+         break;
+  case 3:
+         document.getElementById("magh").innerHTML = "الحزب 5: (تلك الرسل)";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى ( والله عنده حسن المآب ) آل عمران  14";
+         document.getElementById("doaa").innerHTML = "🔰تنبيه: دعاء وقف🔰<br />  اللهم إني أسألك حسن المآب ";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 4:
+         document.getElementById("magh").innerHTML =  "الحزب 8: ( يستبشرون )";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 5:
+         document.getElementById("magh").innerHTML =  "الحزب 11: ( لا يحب الله الجهر بالسوء  )";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى ( قال رجلان من الذين يخافون انعم الله عليهما ادخلوا عليهم الباب فإذا دخلتموه فإنكم غالبون  و على الله فتوكلوا إن كنتم مومنين ) المائدة 25";
+         document.getElementById("doaa").innerHTML = "🔰تنبيه: دعاء وقف🔰<br />  آمنا بالله وعليه توكلنا ";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 6:
+         document.getElementById("magh").innerHTML ="الحزب 14: (إنما يستجيب)";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى ( و لو أننا أنزلنا إليهم الملائكة وكلمهم الموتى وحشرنا عليهم كل شيء قبلا ما كانوا ليومنوا إلا أن يشاء الله ) الأنعام 112";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 7:
+         document.getElementById("magh").innerHTML = "الحزب 17: (قال الملأ)";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى ( إنا لا نضيع اجر المصلحين ) الأعراف 170";
+         document.getElementById("doaa").innerHTML = "🔰تنبيه: دعاء وقف🔰<br /> اللهم اجعلنا من مصلحين ";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 8:
+         document.getElementById("magh").innerHTML =  "الحزب 20: (يا أيها الذين ءامنوا إن كثيرا)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 9:
+         document.getElementById("magh").innerHTML =  "الحزب 23: ⚠️من بداية سورة هود ";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "🔰تنبيه: موضع إستجابة🔰<br />عند قوله تعالى (هو أنشأكم من الأرض و استعمركم فيها فاستغفروه ثم توبوا إليه إن ربي قريب) هود  61 ";
+         break;
+  case 10:
+         document.getElementById("magh").innerHTML =  "الحزب 25: (و ما أبرئ نفسي)";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى ( أفمن يعلم أنما انزل اليك من ربك الحق كمن هو أعمى إنما يتذكر أولوا الألباب ) الرعد 21";
+         document.getElementById("doaa").innerHTML = "🔰تنبيه: دعاء وقف🔰<br />اللهم اجعلنا من أولي الألباب ";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 11:
+         document.getElementById("magh").innerHTML =  "الحزب 28: (و قال الله)";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى ( إن الله مع الذين اتقوا والذين هم محسنون) النحل 128";
+         document.getElementById("doaa").innerHTML = "🔰تنبيه: دعاء وقف🔰<br /> اللهم اجعلنا من الذين اتقوا والذين هم محسنون ";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 12:
+         document.getElementById("magh").innerHTML =  "الحزب 31: (قال ألم أقل لك)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 13:
+         document.getElementById("magh").innerHTML =  "الحزب 34: (يا أيها الناس)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 14:
+         document.getElementById("magh").innerHTML =  "الحزب 37: (وقال الذين )";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 15:
+         document.getElementById("magh").innerHTML =  "الحزب 40: (ولقد وصلنا )";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 16:
+         document.getElementById("magh").innerHTML =  "الحزب 43: (ومن يقنت منكن)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 17:
+         document.getElementById("magh").innerHTML =  "الحزب 45: ⚠️ من بداية سورة يس";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 18:
+         document.getElementById("magh").innerHTML =  "الحزب 48: (ويا قوم مالي ادعوكم )";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "🔰تنبيه: موضع إستجابة🔰<br />عند قوله تعالى( و قال ربكم ادعوني) غافر 60";
+         break;
+  case 19:
+         document.getElementById("magh").innerHTML =  "الحزب 51: (حم تنزيل الكتاب )";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى (ومغانم كثيرة يأخذونها ) الفتح 18";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 20:
+         document.getElementById("magh").innerHTML =  "الحزب 54: ( الرحمن)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 21:
+         document.getElementById("magh").innerHTML = "الحزب 57: ( تبارك )";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+      }
+
+    });
+  </script>
+    
+
+<script>
+function padTo2Digits(num) {
+  return num.toString().padStart(2, '0');
+}
+
+function formatDate(date) {
+  return [
+    padTo2Digits(date.getMonth() + 1),
+    padTo2Digits(date.getDate()),
+    date.getFullYear(),
+  ].join('/');
+}
+//formatDate(new Date())
+var nextDay = new Date();
+var day=formatDate(new Date());
+var date1 = new Date("01/04/1922"); 
+var date2 = new Date(day); 
+var Diff_temps = date2.getTime() - date1.getTime(); 
+var Diff_jours = Diff_temps / (1000 * 3600 * 24);
+var z=(Math.round(Diff_jours)%21)+1;
+    
+    
+ switch (z) {
+
+  case 1:
+         document.getElementById("magh").innerHTML = "الحزب 60: ( سبح اسم ربك الاعلى )";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "🔰تنبيه: دعاء وقف🔰<br />دعاء الختم<br />ومن عادة شيخنا، رضي الله عنه ليلة الختم اذا بلغ سورة الاخلاص أن يرفع هو والقارئَيْن الراتبين أيديهم للدعاء ويقرأ الاخلاص ثلاثا والمعوذتين، ثم يقرأ الفاتحة، ثم يقرأ   ( ألم ذلك الكتاب لا ريب فيه هدى للمتقين . الذين يومنون بالغيب ويقيمون الصلاة ومما رزقناهم ينفقون. والذين يومنون بما أنزل اليك وما انزل من قبلك وبالاخرة هم يوقنون. أولئك على هدى من ربهم وأولئك هم المفلحون ) البقرة 1 - 5 . <br />ثم يقول: <  اللهم اجعلنا على هدى منك واجعلنا من المفلحين > ثلاثا.  ثم يقول < الحمد لله الذي هدانا لهذا وما كنا لنهتدي لولا أن هدانا الله > ثم يدعو أحد القارئين بالدعاء المتقدم بعد الفاتحة خمسا، ثم يقرأ يس والصف قبل قريش ثلاثا، على العادة . ثم يعيد الدعاء أيضا على حاله المذكور.";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 2:
+         document.getElementById("magh").innerHTML =  "الحزب 3: ( سيقول ) ";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "🔰تنبيه: موضع إستجابة🔰<br />عند قوله تعالى ( و إذا سألك عبادي عني فإني قريب) البقرة 187 ";
+         break;
+  case 3:
+         document.getElementById("magh").innerHTML = "الحزب 5: (تلك الرسل)";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى ( والله عنده حسن المآب ) آل عمران  14";
+         document.getElementById("doaa").innerHTML = "🔰تنبيه: دعاء وقف🔰<br />  اللهم إني أسألك حسن المآب ";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 4:
+         document.getElementById("magh").innerHTML =  "الحزب 8: ( يستبشرون )";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 5:
+         document.getElementById("magh").innerHTML =  "الحزب 11: ( لا يحب الله الجهر بالسوء  )";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى ( قال رجلان من الذين يخافون انعم الله عليهما ادخلوا عليهم الباب فإذا دخلتموه فإنكم غالبون  و على الله فتوكلوا إن كنتم مومنين ) المائدة 25";
+         document.getElementById("doaa").innerHTML = "🔰تنبيه: دعاء وقف🔰<br />  آمنا بالله وعليه توكلنا ";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 6:
+         document.getElementById("magh").innerHTML ="الحزب 14: (إنما يستجيب)";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى ( و لو أننا أنزلنا إليهم الملائكة وكلمهم الموتى وحشرنا عليهم كل شيء قبلا ما كانوا ليومنوا إلا أن يشاء الله ) الأنعام 112";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 7:
+         document.getElementById("magh").innerHTML = "الحزب 17: (قال الملأ)";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى ( إنا لا نضيع اجر المصلحين ) الأعراف 170";
+         document.getElementById("doaa").innerHTML = "🔰تنبيه: دعاء وقف🔰<br /> اللهم اجعلنا من مصلحين ";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 8:
+         document.getElementById("magh").innerHTML =  "الحزب 20: (يا أيها الذين ءامنوا إن كثيرا)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 9:
+         document.getElementById("magh").innerHTML =  "الحزب 23: ⚠️من بداية سورة هود ";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "🔰تنبيه: موضع إستجابة🔰<br />عند قوله تعالى (هو أنشأكم من الأرض و استعمركم فيها فاستغفروه ثم توبوا إليه إن ربي قريب) هود  61 ";
+         break;
+  case 10:
+         document.getElementById("magh").innerHTML =  "الحزب 25: (و ما أبرئ نفسي)";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى ( أفمن يعلم أنما انزل اليك من ربك الحق كمن هو أعمى إنما يتذكر أولوا الألباب ) الرعد 21";
+         document.getElementById("doaa").innerHTML = "🔰تنبيه: دعاء وقف🔰<br />اللهم اجعلنا من أولي الألباب ";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 11:
+         document.getElementById("magh").innerHTML =  "الحزب 28: (و قال الله)";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى ( إن الله مع الذين اتقوا والذين هم محسنون) النحل 128";
+         document.getElementById("doaa").innerHTML = "🔰تنبيه: دعاء وقف🔰<br /> اللهم اجعلنا من الذين اتقوا والذين هم محسنون ";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 12:
+         document.getElementById("magh").innerHTML =  "الحزب 31: (قال ألم أقل لك)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 13:
+         document.getElementById("magh").innerHTML =  "الحزب 34: (يا أيها الناس)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 14:
+         document.getElementById("magh").innerHTML =  "الحزب 37: (وقال الذين )";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 15:
+         document.getElementById("magh").innerHTML =  "الحزب 40: (ولقد وصلنا )";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 16:
+         document.getElementById("magh").innerHTML =  "الحزب 43: (ومن يقنت منكن)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 17:
+         document.getElementById("magh").innerHTML =  "الحزب 45: ⚠️ من بداية سورة يس";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 18:
+         document.getElementById("magh").innerHTML =  "الحزب 48: (ويا قوم مالي ادعوكم )";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "🔰تنبيه: موضع إستجابة🔰<br />عند قوله تعالى( و قال ربكم ادعوني) غافر 60";
+         break;
+  case 19:
+         document.getElementById("magh").innerHTML =  "الحزب 51: (حم تنزيل الكتاب )";
+         document.getElementById("waqf").innerHTML = "🔰تنبيه: وقف🔰<br />عند قوله تعالى (ومغانم كثيرة يأخذونها ) الفتح 18";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 20:
+         document.getElementById("magh").innerHTML =  "الحزب 54: ( الرحمن)";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+  case 21:
+         document.getElementById("magh").innerHTML = "الحزب 57: ( تبارك )";
+         document.getElementById("waqf").innerHTML = "";
+         document.getElementById("doaa").innerHTML = "";
+         document.getElementById("istijaba").innerHTML = "";
+         break;
+      }
+
+</script>
+
+</body>
+</html>
